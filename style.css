@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-image: linear-gradient(rgb(44, 6, 43), black
+    );
+}
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+.navbar{
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 25px 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+    /* animation-delay: .8s; */
+}
+
+@keyframes show-content {
+    100%{
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.navbar .logo{
+    font-size: 40px;
+    font-weight: 700;
+    /* background-image: url("hacktheme.jpg");
+    background-size: contain;
+    background-clip: text;
+    color: transparent; */
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    margin-left: 35px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    font-weight: 500;
+    transition: .5s;
+}
+.navbar ul li:hover a,
+.navbar ul li.active a{
+    color: violet;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    margin-top: -20px;
+    padding: 40px 9% 0;
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    animation: show-content 1.5s linear forwards;
+}
+
+.home-info h1{
+    font-size: 55px;
+}
+.home-info h2{
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+
+}
+.home-info h2 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px blueviolet;
+    animation: display-text 12s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    25%,
+     100%{
+        display: none;
+    }
+}
+
+.home-info h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: 2px solid blueviolet;
+    color: blueviolet;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text{
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+/* .home-info p{
+    font-size: 16px;
+    margin: 10px 0 25px; 
+}*/
+.home-info .btn-sci{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background: blueviolet;
+    border: 2px solid blueviolet;
+    border-radius: 40px;
+    box-shadow: 0 0 10px blueviolet;
+    font-weight: 600;
+}
+.btn:hover{
+    background: transparent;
+    color: blueviolet;
+    box-shadow: none;
+}
+
+.home-info .btn-sci .sci{
+    margin-left: 20px;
+}
+.home-info .btn-sci .sci a{
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid blueviolet;
+    border-radius: 50%;
+    font-size: 20px;
+    color: blueviolet;
+    margin: 0 8px;
+}
+.home-info .btn-sci .sci a:hover{
+    background: blueviolet;
+    color: black;
+    box-shadow: 0 0 10px blueviolet;
+}
