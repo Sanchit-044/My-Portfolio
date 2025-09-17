@@ -81,7 +81,7 @@ a {
 @media (max-width: 900px) {
     .nav-hamburger {
         display: inline-block;
-        position: fixed;
+        position: sticky;
     }
 
     .navbar ul {
