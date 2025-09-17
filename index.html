@@ -10,6 +10,8 @@
 </head>
 
 <body>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-hamburger" aria-hidden="true">☰</label>
     <nav class="navbar">
         <a href="#" class="logo">PORTFOLIO</a>
         <ul>
@@ -19,7 +21,9 @@
             <li><a href="#projects">Projects</a> </li>
             <li><a href="#contacts">Contacts</a> </li>
         </ul>
+        
     </nav>
+    
 
     <section class="home" id="home">
         <div class="home-info">
@@ -41,6 +45,7 @@
             </div>
         </div>
     </section>
+    
     <section id="about" style="color: aliceblue;">
         <h3 class="section-title">About Me</h3>
         <div class="about">
@@ -51,13 +56,9 @@
                 <ul>
                     <li>Education: B.Tech — Computer Science & Engineering</li>
                     <li>Interests: Web Development, Competitive Programming, Open Source</li>
-                    <li>Preferred Tools: Git, VS Code, Node.js, React, Linux</li>
+                    <li>Preferred Tools: Git, VS Code, Node.js, React</li>
                 </ul>
-            </div>
-            <div class="about-card quick-facts">
-                <h4>Quick Facts</h4>
-                <p>Location: India<br>Contact: (use form below)</p>
-            </div>
+            
         </div>
     </section>
     <div class="skills-container" id="skills">
@@ -107,8 +108,28 @@
 
 
     </div>
+    <section id="projects">
+  <h3 class="section-title">Projects</h3>
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="../potimg.jpg" alt="Screenshot of Portfolio Website" class="project-img">
+      <h4>Portfolio Website</h4>
+      <p>A responsive personal website built with HTML, CSS, and smooth animations.</p>
+      <a href="https://github.com/Sanchit-044/My-Portfolio" target="_blank" class="btn">View Project</a>
+    </div>
+
+    <div class="project-card">
+      <img src="../notesimg.jpg" alt="Screenshot of Notes App" class="project-img">
+      <h4>Notes App</h4>
+      <p>A fully functional full-stack app that allows user to Signup, Login, CRUD operations and a collaborative workspace</p>
+      <a href="https://github.com/Sanchit-044/NotesApp-SI" target="_blank" class="btn">View Project</a>
+    </div>
+
+  </div>
+</section>
     <div class="contact-container" id="contacts">
-        <p class="contact-form-header">Contact Me</p>
+        <p class="contact-form-header">Let's Have a Chat</p>
         <div class="contact-form-container">
 
             <div class="form-part">
